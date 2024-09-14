@@ -1,6 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import { Button } from '@/components/Button'
 import { Header } from '@/components/Header'
 import { Plus } from 'lucide-react'
+import Image from 'next/image'
+
+import versace from '../assets/images/versace.svg'
+import zara from '../assets/images/zara.svg'
+import gucci from '../assets/images/gucci.svg'
+import prada from '../assets/images/prada.svg'
+import calvinKlein from '../assets/images/calvin-klein.svg'
 
 export default function Home() {
   return (
@@ -48,6 +56,15 @@ export default function Home() {
               <p className="text-black opacity-60">Happy Customers</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="w-full bg-black">
+        <div className="mx-auto my-0 flex h-[122px] max-w-app items-center justify-between">
+          <Image src={versace} width={167} height={40} alt="" />
+          <Image src={zara} width={91} height={40} alt="" />
+          <Image src={gucci} width={156} height={40} alt="" />
+          <Image src={prada} width={194} height={40} alt="" />
+          <Image src={calvinKlein} width={207} height={40} alt="" />
         </div>
       </section>
     </div>
