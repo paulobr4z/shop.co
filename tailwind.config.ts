@@ -16,6 +16,9 @@ const config: Config = {
         display: ['Integralcf-Regular'],
         body: ['Satoshi-Variable'],
       },
+      maxWidth: {
+        app: '1240px',
+      },
     },
   },
   plugins: [],
