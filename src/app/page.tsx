@@ -7,6 +7,7 @@ import { Header } from '@/components/Header'
 import { ProductList } from '@/components/ProductList'
 import { Rating } from '@/components/Rating'
 import { Checkmark } from '@/components/Checkmark'
+import { Footer } from '@/components/Footer'
 
 import versace from '../assets/images/versace.svg'
 import zara from '../assets/images/zara.svg'
@@ -120,7 +121,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-[80px]">
+      <section className="pb-[170px] pt-[80px]">
         <div className="mx-auto my-0 max-w-app">
           <h2 className="font-display text-5xl">OUR HAPPY CUSTOMERS</h2>
           <div className="mt-10 flex items-center gap-5">
@@ -142,6 +143,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }
