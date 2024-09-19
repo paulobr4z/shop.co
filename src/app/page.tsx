@@ -5,6 +5,8 @@ import { Plus } from 'lucide-react'
 import { Button } from '@/components/Button'
 import { Header } from '@/components/Header'
 import { ProductList } from '@/components/ProductList'
+import { Rating } from '@/components/Rating'
+import { Checkmark } from '@/components/Checkmark'
 
 import versace from '../assets/images/versace.svg'
 import zara from '../assets/images/zara.svg'
@@ -12,7 +14,7 @@ import gucci from '../assets/images/gucci.svg'
 import prada from '../assets/images/prada.svg'
 import calvinKlein from '../assets/images/calvin-klein.svg'
 
-import { newArrivals, topSelling } from '@/data/data'
+import { newArrivals, ourHappyCustomers, topSelling } from '@/data/data'
 
 export default function Home() {
   return (
@@ -115,6 +117,28 @@ export default function Home() {
               src="https://raw.githubusercontent.com/paulobr4z/shop.co/master/src/assets/images/gym.svg"
               alt=""
             />
+          </div>
+        </div>
+      </section>
+      <section className="py-[80px]">
+        <div className="mx-auto my-0 max-w-app">
+          <h2 className="font-display text-5xl">OUR HAPPY CUSTOMERS</h2>
+          <div className="mt-10 flex items-center gap-5">
+            {ourHappyCustomers.map((item) => (
+              <div
+                key={item.id}
+                className="min-h-[240px] max-w-[400px] rounded-[20px] border px-8 pt-7"
+              >
+                <Rating />
+                <span className="mt-4 flex items-center gap-2">
+                  <p className="font-body text-xl font-bold">{item.name}</p>
+                  <Checkmark />
+                </span>
+                <p className="pt-3 font-body text-base opacity-60">
+                  &quot;{item.body}&quot;
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
