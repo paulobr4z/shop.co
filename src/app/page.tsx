@@ -91,6 +91,13 @@ export default function Home() {
           </Button>
         </div>
       </section>
+      <section className="flex items-center justify-center">
+        <div className="w-full max-w-app rounded-[40px] bg-[#F0F0F0]">
+          <h2 className="mt-16 text-center font-display text-5xl">
+            BROWSE BY dress STYLE
+          </h2>
+        </div>
+      </section>
     </div>
   )
 }
