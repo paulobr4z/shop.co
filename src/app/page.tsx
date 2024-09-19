@@ -1,14 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
+import { Plus } from 'lucide-react'
+
 import { Button } from '@/components/Button'
 import { Header } from '@/components/Header'
-import { Plus } from 'lucide-react'
-import Image from 'next/image'
+import { ProductList } from '@/components/ProductList'
 
 import versace from '../assets/images/versace.svg'
 import zara from '../assets/images/zara.svg'
 import gucci from '../assets/images/gucci.svg'
 import prada from '../assets/images/prada.svg'
 import calvinKlein from '../assets/images/calvin-klein.svg'
+
+import { newArrivals, topSelling } from '@/data/data'
 
 export default function Home() {
   return (
@@ -59,12 +63,32 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full bg-black">
-        <div className="mx-auto my-0 flex h-[122px] max-w-app items-center justify-between">
+        <div className="mx-auto my-0 flex min-h-[122px] max-w-app flex-wrap items-center justify-center gap-x-8 gap-y-6 px-4 py-10 lg:justify-between">
           <Image src={versace} width={167} height={40} alt="" />
           <Image src={zara} width={91} height={40} alt="" />
           <Image src={gucci} width={156} height={40} alt="" />
           <Image src={prada} width={194} height={40} alt="" />
           <Image src={calvinKlein} width={207} height={40} alt="" />
+        </div>
+      </section>
+      <section className="w-full">
+        <div className="mx-auto my-0 flex max-w-app flex-col items-center border-b">
+          <h2 className="mb-14 mt-[72px] text-center font-display text-5xl">
+            NEW ARRIVALS
+          </h2>
+          <ProductList products={newArrivals} />
+          <Button className="mb-16 mt-9" variant="outline" maxWidth="218px">
+            View All
+          </Button>
+        </div>
+        <div className="mx-auto my-0 flex max-w-app flex-col items-center">
+          <h2 className="mb-14 mt-[72px] text-center font-display text-5xl uppercase">
+            top selling
+          </h2>
+          <ProductList products={topSelling} />
+          <Button className="mb-16 mt-9" variant="outline" maxWidth="218px">
+            View All
+          </Button>
         </div>
       </section>
     </div>
