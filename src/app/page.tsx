@@ -92,10 +92,30 @@ export default function Home() {
         </div>
       </section>
       <section className="flex items-center justify-center">
-        <div className="w-full max-w-app rounded-[40px] bg-[#F0F0F0]">
+        <div className="flex w-full max-w-app flex-col items-center rounded-[40px] bg-[#F0F0F0]">
           <h2 className="mt-16 text-center font-display text-5xl">
             BROWSE BY dress STYLE
           </h2>
+          <div className="mt-16 flex gap-5">
+            <img
+              src="https://raw.githubusercontent.com/paulobr4z/shop.co/master/src/assets/images/casual.svg"
+              alt=""
+            />
+            <img
+              src="https://raw.githubusercontent.com/paulobr4z/shop.co/master/src/assets/images/formal.svg"
+              alt=""
+            />
+          </div>
+          <div className="mb-20 mt-5 flex gap-5">
+            <img
+              src="https://raw.githubusercontent.com/paulobr4z/shop.co/master/src/assets/images/party.svg"
+              alt=""
+            />
+            <img
+              src="https://raw.githubusercontent.com/paulobr4z/shop.co/master/src/assets/images/gym.svg"
+              alt=""
+            />
+          </div>
         </div>
       </section>
     </div>
